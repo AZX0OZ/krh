@@ -1,0 +1,103 @@
+-- GameDetector.lua
+-- Game detection and script launcher system
+
+-- Wait for the game to load
+repeat task.wait(1) until game:IsLoaded()
+
+-- Get current game ID
+local gameId = game.PlaceId
+
+-- Notification function
+local function notify(title, message)
+    pcall(function()
+        if syn and syn.toast then
+            syn.toast(title .. ": " .. message)
+        else
+            print(title .. ": " .. message)
+        end
+    end)
+end
+
+-- Game identification systems
+-- System 1: Direct game ID mapping
+local gameNames = {
+    [16732694052] = "Fish Game",
+    [537413528] = "Build A Boat For Treasure",
+    [13559584718] = "Lone Survival",
+    [2000062521] = "State of Anarchy"
+}
+
+-- System 2: Game universes (groups of IDs)
+local gameUniverses = {
+    -- Fish Game and its servers
+    ["FishGame"] = {
+        ids = {16732694052}, -- list of all server IDs
+        name = "Fish Game",
+        script = "https://raw.githubusercontent.com/AZX0OZ/test/refs/heads/main/RAILhub%20fisch"
+    },
+    
+    -- Build A Boat
+    ["BuildABoat"] = {
+        ids = {537413528},
+        name = "Build A Boat For Treasure",
+        script = "https://raw.githubusercontent.com/AZX0OZ/RAIL-HUB/refs/heads/main/BuildABoatForTreasure"
+    },
+    
+    -- Lone Survival and all its servers
+    ["LoneSurvival"] = {
+        ids = {
+            13800223141, -- main server
+            13559584718 -- test server
+        },
+        name = "Lone Survival",
+        script = "https://raw.githubusercontent.com/AZX0OZ/LONE-ESP/refs/heads/main/lone"
+    },
+    
+    -- State of Anarchy
+    ["StateOfAnarchy"] = {
+        ids = {2000062521, 1517425836, 16153158425, 4026676776, 16371880317, 6361792543, 14585248573, 6278335370, 92537562073813},
+        name = "State of Anarchy",
+        script = "https://raw.githubusercontent.com/AZX0OZ/State-of-Anarchy/refs/heads/main/123"
+    }
+}
+
+-- Script execution function
+local function runScript(url, name)
+    notify("RAILhub", "Launching script " .. name)
+    
+    pcall(function()
+        loadstring(game:HttpGet(url))()
+    end)
+end
+
+-- Check game information
+local gameInfo = {}
+pcall(function()
+    gameInfo = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId)
+end)
+
+local gameVersion = "Unknown Game"
+local universeName = ""
+local scriptToRun = nil
+
+if gameInfo and gameInfo.Name then
+    gameVersion = gameInfo.Name
+end
+
+-- Determine game universe based on ID
+for universeName, universeData in pairs(gameUniverses) do
+    for _, id in ipairs(universeData.ids) do
+        if gameId == id then
+            -- Found the game universe
+            notify("RAILhub", "Detected game: " .. universeData.name .. " (ID: " .. gameId .. ")")
+            notify("RAILhub", "Launching specialized script")
+            runScript(universeData.script, "for " .. universeData.name)
+            return -- Exit script execution since the appropriate script has been launched
+        end
+    end
+end
+
+-- If we reached this point, the game was not found in the list
+notify("RAILhub", "Detected game: " .. gameVersion .. " (ID: " .. gameId .. ")")
+notify("RAILhub", "Game not directly supported, launching universal script")
+runScript("https://raw.githubusercontent.com/AZX0OZ/univ/refs/heads/main/rh.lua", "universal") 
