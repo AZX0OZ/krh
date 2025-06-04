@@ -7,17 +7,13 @@ if not _G.RAILhub_KeySystemAttempted then
 
     -- Check if the script was properly authorized through KeySystem
     if not _G.RAILhub_KeyAuthorized then
-        -- Try to load the key system first
+        -- Вызываем вебхук перед киком
         pcall(function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/keyrh/refs/heads/main/RAILhub"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/1231232123123/refs/heads/main/wbh"))()
         end)
-        -- Wait a bit for key system to potentially authorize
-        task.wait(3)
-        -- Check again, if still not authorized, exit
-        if not _G.RAILhub_KeyAuthorized then
-            game:GetService("Players").LocalPlayer:Kick("Unauthorized access. Please use the official loader. https://discord.gg/67UTqK8su5")
-            return
-        end
+        task.wait(1) -- Даём немного времени для отправки запроса
+        game:GetService("Players").LocalPlayer:Kick("Trying to bypass the key system has been detected! Please use the official loader! https://discord.gg/67UTqK8su5")
+        return
     end
 end
 
