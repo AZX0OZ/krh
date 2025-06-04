@@ -1,18 +1,23 @@
 repeat task.wait(1) until game:IsLoaded()
 local gameId = game.PlaceId
 
--- Check if the script was properly authorized through KeySystem
-if not _G.RAILhub_KeyAuthorized then
-    -- Try to load the key system first
-    pcall(function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/keyrh/refs/heads/main/RAILhub"))()
-    end)
-    -- Wait a bit for key system to potentially authorize
-    task.wait(3)
-    -- Check again, if still not authorized, exit
+-- Prevent infinite loop by checking if we've already tried to load the key system
+if not _G.RAILhub_KeySystemAttempted then
+    _G.RAILhub_KeySystemAttempted = true
+
+    -- Check if the script was properly authorized through KeySystem
     if not _G.RAILhub_KeyAuthorized then
-        game:GetService("Players").LocalPlayer:Kick("Unauthorized access. Please use the official loader.")
-        return
+        -- Try to load the key system first
+        pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/keyrh/refs/heads/main/RAILhub"))()
+        end)
+        -- Wait a bit for key system to potentially authorize
+        task.wait(3)
+        -- Check again, if still not authorized, exit
+        if not _G.RAILhub_KeyAuthorized then
+            game:GetService("Players").LocalPlayer:Kick("Unauthorized access. Please use the official loader. https://discord.gg/67UTqK8su5")
+            return
+        end
     end
 end
 
