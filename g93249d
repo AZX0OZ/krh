@@ -1,3 +1,4 @@
+print("loading...")
 repeat task.wait(0.5) until game:IsLoaded()
 
 task.wait(2)
