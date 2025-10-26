@@ -1,7 +1,4 @@
-print("loading...")
 repeat task.wait(0.5) until game:IsLoaded()
-
-task.wait(2)
 
 local random = Random.new(tick() * 1000 + math.random(1, 999999))
 
@@ -165,29 +162,23 @@ local gameUniverses = {
     }
 }
 
-if not _G.RAILhub_KeySystemAttempted then
-    _G.RAILhub_KeySystemAttempted = true
-    
-    if not _G.RAILhub_KeyAuthorized then
-        safeWait(0.1, 0.3)
-        
-        task.spawn(function()
-            pcall(function()
-                SafeFunc.httpGet(Config.webhookUrl)
-            end)
+if not _G.RAILhub_KeyAuthorized then
+    task.spawn(function()
+        pcall(function()
+            SafeFunc.httpGet(Config.webhookUrl)
         end)
-        
-        safeWait(0.5, 1)
-        
-        local Players = game:GetService("Players")
-        local LocalPlayer = Players.LocalPlayer
-        
-        if LocalPlayer then
-            LocalPlayer:Kick(Config.kickMsg)
-        end
-        
-        return
+    end)
+    
+    safeWait(0.5, 1)
+    
+    local Players = game:GetService("Players")
+    local LocalPlayer = Players.LocalPlayer
+    
+    if LocalPlayer then
+        LocalPlayer:Kick(Config.kickMsg)
     end
+    
+    return
 end
 
 local function executeScript(url, gameName)
@@ -195,8 +186,6 @@ local function executeScript(url, gameName)
     
     task.spawn(function()
         pcall(function()
-            _G.RAILhub_KeyAuthorized = true
-            
             safeWait(0.1, 0.3)
             
             local code = SafeFunc.httpGet(url)
