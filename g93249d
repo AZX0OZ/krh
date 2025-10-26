@@ -225,3 +225,4 @@ if not scriptFound then
     safeWait(0.2, 0.4)
     executeScript(Config.scripts.universal, "Universal")
 end
+print(432)
