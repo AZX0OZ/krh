@@ -8,6 +8,8 @@ elseif game.PlaceId == 537413528 then
      loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/RAIL-HUB/refs/heads/main/2318ui1b0Boa112For666Treasure1"))() --buildBoat
 elseif game.PlaceId == 16732694052 then
      loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/test/refs/heads/main/RA1Lu78cryhw8ufi9ekfisch"))() --fish
+elseif game.PlaceId == 14890802310 or game.PlaceId == 74747090658891 then
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/12123/refs/heads/main/kek.luac"))() --Bizarre Lineage
 elseif game.PlaceId == 4991214437 then
      loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/town/refs/heads/main/Protected_8550531843546270.lua"))() --town
 end
