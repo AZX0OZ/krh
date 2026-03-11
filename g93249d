@@ -1,1 +1,13 @@
-loadstring(game:HttpGet("https://api.junkie-development.de/api/v1/luascripts/public/aab97f916014640a075399c1bf8ba7ba2565db5bf3778d7e2cb708c10e3a5ec5/download"))()
+if game.PlaceId == 18537079992 then
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/railhub1212/refs/heads/main/army-rp-3243243242e36AREGEAZEG3"))() --armyRP
+elseif game.PlaceId == 13800223141 or game.PlaceId == 139307005148921 or game.PlaceId == 13559584718 then
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/LONE-ESP/refs/heads/main/LOna-SVO-sYrIVLEV3"))() --loneSurvival
+elseif game.PlaceId == 2000062521 or game.PlaceId == 1517425836 or game.PlaceId == 16153158425 or game.PlaceId == 4026676776 or game.PlaceId == 16371880317 or game.PlaceId == 6361792543 or game.PlaceId == 14585248573 or game.PlaceId == 6278335370 or game.PlaceId == 92537562073813 then
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/State-of-Anarchy/refs/heads/main/UJ72DYHRD23OL-P3%5B2"))() --stateAnarchy
+elseif game.PlaceId == 537413528 then
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/RAIL-HUB/refs/heads/main/2318ui1b0Boa112For666Treasure1"))() --buildBoat
+elseif game.PlaceId == 16732694052 then
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/test/refs/heads/main/RA1Lu78cryhw8ufi9ekfisch"))() --fish
+elseif game.PlaceId == 4991214437 then
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/town/refs/heads/main/Protected_8550531843546270.lua"))() --town
+end
