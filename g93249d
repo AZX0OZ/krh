@@ -1,3 +1,4 @@
+wait(1.5)
 if game.PlaceId == 18537079992 then
      loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/railhub1212/refs/heads/main/army-rp-3243243242e36AREGEAZEG3"))() --armyRP
 elseif game.PlaceId == 13800223141 or game.PlaceId == 139307005148921 or game.PlaceId == 13559584718 then
