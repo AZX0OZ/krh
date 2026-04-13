@@ -14,16 +14,16 @@ elseif id == 2000062521 then -- stateAnarchy
 elseif id == 537413528 then -- buildBoat
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/RAIL-HUB/refs/heads/main/2318ui1b0Boa112For666Treasure1"))()
 
-elseif id == 16732694052 then -- fish
+elseif id == 5750914919 then -- fish
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/test/refs/heads/main/RA1Lu78cryhw8ufi9ekfisch"))()
 
 elseif id == 14890802310 then -- Bizarre Lineage
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/12123/refs/heads/main/kek.luac"))()
 
-elseif id == 4991214437 then -- town
+elseif id == 1718755273 then -- town
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/town/refs/heads/main/Protected_8550531843546270.lua"))()
 
-elseif id == 2809202155 then -- YBA
+elseif id == 1016936714 then -- YBA
     --loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/town/refs/heads/main/Protected_8550531843546270.lua"))()
     Print(1488)
 end
