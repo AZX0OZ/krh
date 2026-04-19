@@ -17,7 +17,7 @@ elseif id == 210851291 then -- buildBoat
 elseif id == 5750914919 then -- fish
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/test/refs/heads/main/RA1Lu78cryhw8ufi9ekfisch"))()
 
-elseif id == 14890802310 then -- Bizarre Lineage
+elseif id == 5130394318 then -- Bizarre Lineage
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/12123/refs/heads/main/kek.luac"))()
 
 elseif id == 1718755273 then -- town
