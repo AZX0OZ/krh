@@ -21,7 +21,7 @@ elseif id == 5130394318 then -- Bizarre Lineage
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/12123/refs/heads/main/kek.luac"))()
 
 elseif id == 1718755273 then -- town
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/town/refs/heads/main/Protected_8550531843546270.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/townb/refs/heads/main/town.lua"))()
 
 elseif id == 1016936714 then -- YBA
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/12123/refs/heads/main/yba.lua"))()
