@@ -5,18 +5,6 @@ local id = game.GameId
 if id == 6280758286 then -- armyRP
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/railhub1212/refs/heads/main/army-rp-3243243242e36AREGEAZEG3"))()
 
-elseif id == 4712109542 then -- loneSurvival
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/LONE-ESP/refs/heads/main/LOna-SVO-sYrIVLEV3"))()
-
-elseif id == 595270616 then -- stateAnarchy
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/State-of-Anarchy/refs/heads/main/UJ72DYHRD23OL-P3%5B2"))()
-
-elseif id == 210851291 then -- buildBoat
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/RAIL-HUB/refs/heads/main/2318ui1b0Boa112For666Treasure1"))()
-
-elseif id == 5750914919 then -- fish
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/test/refs/heads/main/RA1Lu78cryhw8ufi9ekfisch"))()
-
 elseif id == 1718755273 then -- town
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/townb/refs/heads/main/town.lua"))()
 
