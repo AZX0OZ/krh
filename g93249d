@@ -10,4 +10,7 @@ elseif id == 1718755273 then -- town
 
 elseif id == 1016936714 then -- YBA
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/12123/refs/heads/main/yba.lua"))()
+
+elseif id == 66654135 then -- MM2
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/12123/refs/heads/main/yba.lua"))()
 end
