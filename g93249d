@@ -1,4 +1,4 @@
-task.wait(1.5)
+task.wait(3)
 
 local id = game.GameId
 
