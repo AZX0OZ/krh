@@ -12,5 +12,5 @@ elseif id == 1016936714 then -- YBA
     loadstring(game:HttpGet("https://api.jnkie.com/api/v1/luascripts/public/00a8b35211c794ab19a3104036658cc07e3141f8336b961038125edc5093bdbd/download"))()
 
 elseif id == 2862098693 then -- pd free
-    loadstring(game:HttpGet("https://api.jnkie.com/api/v1/luascripts/public/f189c183df95e6b46adbbf836cce8b64ce8facf3f9668cb4842fe9cc86e652ae/download"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/12123/refs/heads/main/pd.lua"))()
 end
