@@ -1,16 +1,1 @@
-task.wait(5)
-
-local id = game.GameId
-
-if id == 6280758286 then -- armyRP
-    loadstring(game:HttpGet("https://github.com/AZX0OZ/12123/raw/refs/heads/main/arp"))()
-
-elseif id == 66654135 then -- MM2
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/townb/refs/heads/main/MM2.lua"))()
-
-elseif id == 1016936714 then -- YBA
-    loadstring(game:HttpGet("https://github.com/AZX0OZ/12123/raw/refs/heads/main/yba.lua"))()
-
-elseif id == 2862098693 then -- pd free
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AZX0OZ/12123/refs/heads/main/pd.lua"))()
-end
+print(234)
